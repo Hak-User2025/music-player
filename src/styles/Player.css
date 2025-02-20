@@ -1,0 +1,88 @@
+/* 🎧 Player Container */
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+    width: 100%;
+    max-width: 480px;
+    margin: 25px auto;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🎛️ Player Buttons */
+.player button {
+    background: linear-gradient(145deg, #222, #333);
+    border: none;
+    color: white;
+    font-size: 22px;
+    padding: 14px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px #111, -4px -4px 10px #444;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover & Click Effects */
+.player button:hover {
+    background: linear-gradient(145deg, #333, #222);
+    transform: scale(1.1);
+}
+
+.player button:active {
+    transform: scale(0.9);
+    box-shadow: inset 3px 3px 6px #111, inset -3px -3px 6px #444;
+}
+
+/* 🔊 Volume Control */
+.volume-control {
+    width: 120px;
+    height: 8px;
+    border-radius: 6px;
+    appearance: none;
+    background: #666;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.volume-control:hover {
+    background: #ffcc00;
+}
+
+/* 🎶 Track Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 100%;
+    background: #ffcc00;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* 🎵 Responsive Design */
+@media (max-width: 768px) {
+    .player {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .volume-control {
+        width: 90%;
+    }
+}

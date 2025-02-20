@@ -1,0 +1,60 @@
+/* Home Page Styling */
+.home-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 80px;
+    background: linear-gradient(135deg, #1e1e1e, #252525);
+    color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-container:hover {
+    transform: scale(1.02);
+}
+
+/* Header Section */
+.home-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.home-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffdd57;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.home-header p {
+    font-size: 16px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-container {
+    animation: fadeIn 0.8s ease-in-out;
+}
